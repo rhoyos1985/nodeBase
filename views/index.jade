@@ -1,0 +1,31 @@
+extends layout
+
+block content
+	article
+		div.addCommentForm
+			form(method="post", action="/entries")
+				div
+					div
+						span.label #{__('name')} :
+						input(name="name")
+					div
+						span.label #{__('email')} :
+						input(name="surname")
+					div
+						span.label #{__('age')} :
+						input(name="age")
+					div#addCommentSubmit
+						input(type="submit", value="Ingresar")
+		#entries
+			- each entry in entries
+				.entry(style="padding:2%;border:1px solid #51b6ae ")
+					span #{entry}
+
+					br
+					a#api(href='/sessions/#{entry.id}', style="display:inline-block")
+						input(type='submit', value='View API')
+					input#del(type='submit', value='Delete', data-id='#{entry.id}')
+block footer
+	blockquote #{footer}
+	a(href='https://github.com/cybermarkus1/node_APIrest') Github project
+	a(href='https://bitbucket.org/cybermarkus1/node_apirest', style="margin-left:2%") Bitbucket project

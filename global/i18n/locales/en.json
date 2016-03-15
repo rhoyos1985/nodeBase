@@ -1,0 +1,16 @@
+{
+	"name"		: "Name",
+	"lastname"	: "Last Name",
+	"username"	: "User Name",
+	"age"		: "Age",
+	"email"		: "E-Mail",
+	"sex"		: "Sex",
+	"errApp"	: {
+		"err500"	: "Internal server error, please try later",
+		"err400"	: "Application Error please report if it happens again",
+		"errDB0001"	: "Connection Error database"
+	},
+	"successApp": {
+		"msjConDB"	: "Connected to the database"
+	} 
+}
